@@ -2,7 +2,7 @@ package sample;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
+
 import javafx.scene.Scene;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
@@ -13,7 +13,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         FXMLLoader loader = new FXMLLoader(this.getClass().getResource("sample.fxml"));
         StackPane stackPane = loader.load();
-        Scene scene = new Scene(stackPane, 400, 400);
+        Scene scene = new Scene(stackPane, 800, 1000);
         primaryStage.setScene(scene);
         primaryStage.setTitle("Electric Master");
         primaryStage.show();
