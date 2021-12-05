@@ -13,7 +13,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         FXMLLoader loader = new FXMLLoader(this.getClass().getResource("sample.fxml"));
         StackPane stackPane = loader.load();
-        Scene scene = new Scene(stackPane, 800, 1000);
+        Scene scene = new Scene(stackPane, 1000, 1000);
         primaryStage.setScene(scene);
         primaryStage.setTitle("Electric Master");
         primaryStage.show();
