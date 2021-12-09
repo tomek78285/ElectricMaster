@@ -15,7 +15,7 @@ public class AppController {
     double napiecie = 9;
 
     @FXML
-    private CheckBox A2_B2;
+    public CheckBox A2_B2;
     @FXML
     private CheckBox A3_B3;
     @FXML
@@ -127,7 +127,7 @@ public class AppController {
 // #########################################
 
     @FXML
-    private ImageView im_A2_B2;
+    public ImageView im_A2_B2;
     @FXML
     private ImageView im_A3_B3;
     @FXML
@@ -235,17 +235,37 @@ public class AppController {
     @FXML
     private ChoiceBox elementy;
 
-    Image przewod = new Image(getClass().getResourceAsStream("przewod.png"));
-    Image przewod2 = new Image(getClass().getResourceAsStream("przewod2.png"));
-    Image rezystor330 = new Image(getClass().getResourceAsStream("rezystor330.png"));
-    Image rezystor10k = new Image(getClass().getResourceAsStream("rezystor10k.png"));
-    Image brak = new Image(getClass().getResourceAsStream("brak.png"));
+    Image przewod = new Image(getClass().getResourceAsStream("img/przewod.png"));
+    Image przewod2 = new Image(getClass().getResourceAsStream("img/przewod2.png"));
+    Image rezystor100 = new Image(getClass().getResourceAsStream("img/rezystor100.png"));
+    Image rezystor100_2 = new Image(getClass().getResourceAsStream("img/rezystor100_2.png"));
+    Image rezystor330 = new Image(getClass().getResourceAsStream("img/rezystor330.png"));
+    Image rezystor330_2 = new Image(getClass().getResourceAsStream("img/rezystor330_2.png"));
+    Image rezystor1k = new Image(getClass().getResourceAsStream("img/rezystor1k.png"));
+    Image rezystor1k_2 = new Image(getClass().getResourceAsStream("img/rezystor1k_2.png"));
+    Image rezystor10k = new Image(getClass().getResourceAsStream("img/rezystor10k.png"));
+    Image rezystor10k_2 = new Image(getClass().getResourceAsStream("img/rezystor10k_2.png"));
+    Image kondensator100nf = new Image(getClass().getResourceAsStream("img/kondensator_ceramiczny.png"));
+    Image kondensator100nf_2 = new Image(getClass().getResourceAsStream("img/kondensator_ceramiczny_2.png"));
+    Image kondensator220uf = new Image(getClass().getResourceAsStream("img/kondensator220.png"));
+    Image kondensator220uf_2 = new Image(getClass().getResourceAsStream("img/kondensator220_2.png"));
+    Image kondensator1000uf = new Image(getClass().getResourceAsStream("img/kondensator1000.png"));
+    Image kondensator1000uf_2 = new Image(getClass().getResourceAsStream("img/kondensator1000_2.png"));
+    Image dioda_krzemowa = new Image(getClass().getResourceAsStream("img/dioda_krzemowa.png"));
+    Image dioda_krzemowa_2 = new Image(getClass().getResourceAsStream("img/dioda_krzemowa_2.png"));
+    Image brak = new Image(getClass().getResourceAsStream("img/brak.png"));
+    Image brak2 = new Image(getClass().getResourceAsStream("img/brak2.png"));
 
     public void initialize() {
         elementy.getItems().add("Przewod");
+        elementy.getItems().add("Rezystor 100");
         elementy.getItems().add("Rezystor 330");
+        elementy.getItems().add("Rezystor 1k");
         elementy.getItems().add("Rezystor 10k");
-        elementy.getItems().add("Dioda");
+        elementy.getItems().add("Kondensator 100nf");
+        elementy.getItems().add("Kondensator 220uf");
+        elementy.getItems().add("Kondensator 1000uf");
+        elementy.getItems().add("Dioda krzemowa");
     }
 
     @FXML
@@ -257,620 +277,278 @@ public class AppController {
         this.mainController = mainController;
     }
 
-    public void changeA2_B2(ActionEvent event) {
-        if(A2_B2.isSelected()) {
+
+    public void change_vertical(CheckBox checkBox, ImageView image) {
+        if(checkBox.isSelected()) {
             if(elementy.getValue() == "Przewod") {
-                im_A2_B2.setImage(przewod);
+                image.setImage(przewod);
+            }
+            else if(elementy.getValue() == "Rezystor 100") {
+                image.setImage(rezystor100);
             }
             else if(elementy.getValue() == "Rezystor 330") {
-                im_A2_B2.setImage(rezystor330);
+                image.setImage(rezystor330);
+            }
+            else if(elementy.getValue() == "Rezystor 1k") {
+                image.setImage(rezystor1k);
+            }
+            else if(elementy.getValue() == "Rezystor 10k") {
+                image.setImage(rezystor10k);
+            }
+            else if(elementy.getValue() == "Kondensator 100nf") {
+                image.setImage(kondensator100nf);
+            }
+            else if(elementy.getValue() == "Kondensator 220uf") {
+                image.setImage(kondensator220uf);
+            }
+            else if(elementy.getValue() == "Kondensator 1000uf") {
+                image.setImage(kondensator1000uf);
+            }
+            else if(elementy.getValue() == "Dioda krzemowa") {
+                image.setImage(dioda_krzemowa);
             }
         }
-        else im_A2_B2.setImage(brak);
+        else image.setImage(brak2);
     }
 
-    public void changeA3_B3(ActionEvent event) {
-        if(A3_B3.isSelected()) {
+    public void change_horizontal(CheckBox checkBox, ImageView image) {
+        if(checkBox.isSelected()) {
             if(elementy.getValue() == "Przewod") {
-                im_A3_B3.setImage(przewod);
+                image.setImage(przewod2);
+            }
+            else if(elementy.getValue() == "Rezystor 100") {
+                image.setImage(rezystor100_2);
             }
             else if(elementy.getValue() == "Rezystor 330") {
-                im_A3_B3.setImage(rezystor330);
+                image.setImage(rezystor330_2);
+            }
+            else if(elementy.getValue() == "Rezystor 1k") {
+                image.setImage(rezystor1k_2);
+            }
+            else if(elementy.getValue() == "Rezystor 10k") {
+                image.setImage(rezystor10k_2);
+            }
+            else if(elementy.getValue() == "Kondensator 100nf") {
+                image.setImage(kondensator100nf_2);
+            }
+            else if(elementy.getValue() == "Kondensator 220uf") {
+                image.setImage(kondensator220uf_2);
+            }
+            else if(elementy.getValue() == "Kondensator 1000uf") {
+                image.setImage(kondensator1000uf_2);
+            }
+            else if(elementy.getValue() == "Dioda krzemowa") {
+                image.setImage(dioda_krzemowa_2);
             }
         }
-        else im_A3_B3.setImage(brak);
+        else image.setImage(brak);
     }
 
-    public void changeA4_B4(ActionEvent event) {
-        if(A4_B4.isSelected()) {
-            if(elementy.getValue() == "Przewod") {
-                im_A4_B4.setImage(przewod);
-            }
-            else if(elementy.getValue() == "Rezystor 330") {
-                im_A4_B4.setImage(rezystor330);
-            }
-        }
-        else im_A4_B4.setImage(brak);
-    }
-    public void changeA5_B5(ActionEvent event) {
-        if(A5_B5.isSelected()) {
-            if(elementy.getValue() == "Przewod") {
-                im_A5_B5.setImage(przewod);
-            }
-            else if(elementy.getValue() == "Rezystor 330") {
-                im_A5_B5.setImage(rezystor330);
-            }
-        }
-        else im_A5_B5.setImage(brak);
+    public void changeA2_B2() {
+        change_vertical(A2_B2, im_A2_B2);
     }
 
-    public void changeA6_B6(ActionEvent event) {
-        if(A6_B6.isSelected()) {
-            if(elementy.getValue() == "Przewod") {
-                im_A6_B6.setImage(przewod);
-            }
-            else if(elementy.getValue() == "Rezystor 330") {
-                im_A6_B6.setImage(rezystor330);
-            }
-        }
-        else im_A6_B6.setImage(brak);
+    public void changeA3_B3() {
+        change_vertical(A3_B3, im_A3_B3);
     }
 
-    public void changeA7_B7(ActionEvent event) {
-        if(A7_B7.isSelected()) {
-            if(elementy.getValue() == "Przewod") {
-                im_A7_B7.setImage(przewod);
-            }
-            else if(elementy.getValue() == "Rezystor 330") {
-                im_A7_B7.setImage(rezystor330);
-            }
-        }
-        else im_A7_B7.setImage(brak);
+    public void changeA4_B4() {
+        change_vertical(A4_B4, im_A4_B4);
     }
 
-    public void changeA8_B8(ActionEvent event) {
-        if(A8_B8.isSelected()) {
-            if(elementy.getValue() == "Przewod") {
-                im_A8_B8.setImage(przewod);
-            }
-            else if(elementy.getValue() == "Rezystor 330") {
-                im_A8_B8.setImage(rezystor330);
-            }
-        }
-        else im_A8_B8.setImage(brak);
+    public void changeA5_B5() {
+        change_vertical(A5_B5, im_A5_B5);
     }
 
-    public void changeA9_B9(ActionEvent event) {
-        if(A9_B9.isSelected()) {
-            if(elementy.getValue() == "Przewod") {
-                im_A9_B9.setImage(przewod);
-            }
-            else if(elementy.getValue() == "Rezystor 330") {
-                im_A9_B9.setImage(rezystor330);
-            }
-        }
-        else im_A9_B9.setImage(brak);
+    public void changeA6_B6() {
+        change_vertical(A6_B6, im_A6_B6);
     }
 
-    public void changeB1_B2(ActionEvent event) {
-        if(B1_B2.isSelected()) {
-            if(elementy.getValue() == "Przewod") {
-                im_B1_B2.setImage(przewod2);
-            }
-            else if(elementy.getValue() == "Rezystor 330") {
-                im_B1_B2.setImage(rezystor330);
-            }
-        }
-        else im_B1_B2.setImage(brak);
+    public void changeA7_B7() {
+        change_vertical(A7_B7, im_A7_B7);
     }
 
-    public void changeB2_B3(ActionEvent event) {
-        if(B2_B3.isSelected()) {
-            if(elementy.getValue() == "Przewod") {
-                im_B2_B3.setImage(przewod2);
-            }
-            else if(elementy.getValue() == "Rezystor 330") {
-                im_B2_B3.setImage(rezystor330);
-            }
-        }
-        else im_B2_B3.setImage(brak);
-    }
-    public void changeB3_B4(ActionEvent event) {
-        if(B3_B4.isSelected()) {
-            if(elementy.getValue() == "Przewod") {
-                im_B3_B4.setImage(przewod2);
-            }
-            else if(elementy.getValue() == "Rezystor 330") {
-                im_B3_B4.setImage(rezystor330);
-            }
-        }
-        else im_B3_B4.setImage(brak);
-    }
-    public void changeB4_B5(ActionEvent event) {
-        if(B4_B5.isSelected()) {
-            if(elementy.getValue() == "Przewod") {
-                im_B4_B5.setImage(przewod2);
-            }
-            else if(elementy.getValue() == "Rezystor 330") {
-                im_B4_B5.setImage(rezystor330);
-            }
-        }
-        else im_B4_B5.setImage(brak);
+    public void changeA8_B8() {
+        change_vertical(A8_B8, im_A8_B8);
     }
 
-    public void changeB5_B6(ActionEvent event) {
-        if(B5_B6.isSelected()) {
-            if(elementy.getValue() == "Przewod") {
-                im_B5_B6.setImage(przewod2);
-            }
-            else if(elementy.getValue() == "Rezystor 330") {
-                im_B5_B6.setImage(rezystor330);
-            }
-        }
-        else im_B5_B6.setImage(brak);
+    public void changeA9_B9() {
+        change_vertical(A9_B9, im_A9_B9);
     }
 
-    public void changeB6_B7(ActionEvent event) {
-        if(B6_B7.isSelected()) {
-            if(elementy.getValue() == "Przewod") {
-                im_B6_B7.setImage(przewod2);
-            }
-            else if(elementy.getValue() == "Rezystor 330") {
-                im_B6_B7.setImage(rezystor330);
-            }
-        }
-        else im_B6_B7.setImage(brak);
+    public void changeB1_B2() {
+        change_horizontal(B1_B2, im_B1_B2);
     }
 
-    public void changeB7_B8(ActionEvent event) {
-        if(B7_B8.isSelected()) {
-            if(elementy.getValue() == "Przewod") {
-                im_B7_B8.setImage(przewod2);
-            }
-            else if(elementy.getValue() == "Rezystor 330") {
-                im_B7_B8.setImage(rezystor330);
-            }
-        }
-        else im_B7_B8.setImage(brak);
-    }
-    public void changeB8_B9(ActionEvent event) {
-        if(B8_B9.isSelected()) {
-            if(elementy.getValue() == "Przewod") {
-                im_B8_B9.setImage(przewod2);
-            }
-            else if(elementy.getValue() == "Rezystor 330") {
-                im_B8_B9.setImage(rezystor330);
-            }
-        }
-        else im_B8_B9.setImage(brak);
-    }
-    public void changeB9_B10(ActionEvent event) {
-        if(B9_B10.isSelected()) {
-            if(elementy.getValue() == "Przewod") {
-                im_B9_B10.setImage(przewod2);
-            }
-            else if(elementy.getValue() == "Rezystor 330") {
-                im_B9_B10.setImage(rezystor330);
-            }
-        }
-        else im_B9_B10.setImage(brak);
+    public void changeB2_B3() {
+        change_horizontal(B2_B3, im_B2_B3);
     }
 
-    public void changeC1_C2(ActionEvent event) {
-        if(C1_C2.isSelected()) {
-            if(elementy.getValue() == "Przewod") {
-                im_C1_C2.setImage(przewod2);
-            }
-            else if(elementy.getValue() == "Rezystor 330") {
-                im_C1_C2.setImage(rezystor330);
-            }
-        }
-        else im_C1_C2.setImage(brak);
+    public void changeB3_B4() {
+        change_horizontal(B3_B4, im_B3_B4);
     }
 
-    public void changeC2_C3(ActionEvent event) {
-        if(C2_C3.isSelected()) {
-            if(elementy.getValue() == "Przewod") {
-                im_C2_C3.setImage(przewod2);
-            }
-            else if(elementy.getValue() == "Rezystor 330") {
-                im_C2_C3.setImage(rezystor330);
-            }
-        }
-        else im_C2_C3.setImage(brak);
+    public void changeB4_B5() {
+        change_horizontal(B4_B5, im_B4_B5);
     }
 
-    public void changeC3_C4(ActionEvent event) {
-        if(C3_C4.isSelected()) {
-            if(elementy.getValue() == "Przewod") {
-                im_C3_C4.setImage(przewod2);
-            }
-            else if(elementy.getValue() == "Rezystor 330") {
-                im_C3_C4.setImage(rezystor330);
-            }
-        }
-        else im_C3_C4.setImage(brak);
-    }
-    public void changeC4_C5(ActionEvent event) {
-        if(C4_C5.isSelected()) {
-            if(elementy.getValue() == "Przewod") {
-                im_C4_C5.setImage(przewod2);
-            }
-            else if(elementy.getValue() == "Rezystor 330") {
-                im_C4_C5.setImage(rezystor330);
-            }
-        }
-        else im_C4_C5.setImage(brak);
+    public void changeB5_B6() {
+        change_horizontal(B5_B6, im_B5_B6);
     }
 
-    public void changeC5_C6(ActionEvent event) {
-        if(C5_C6.isSelected()) {
-            if(elementy.getValue() == "Przewod") {
-                im_C5_C6.setImage(przewod2);
-            }
-            else if(elementy.getValue() == "Rezystor 330") {
-                im_C5_C6.setImage(rezystor330);
-            }
-        }
-        else im_C5_C6.setImage(brak);
+    public void changeB6_B7() {
+        change_horizontal(B6_B7, im_B6_B7);
     }
 
-    public void changeC6_C7(ActionEvent event) {
-        if(C6_C7.isSelected()) {
-            if(elementy.getValue() == "Przewod") {
-                im_C6_C7.setImage(przewod2);
-            }
-            else if(elementy.getValue() == "Rezystor 330") {
-                im_C6_C7.setImage(rezystor330);
-            }
-        }
-        else im_C6_C7.setImage(brak);
+    public void changeB7_B8() {
+        change_horizontal(B7_B8, im_B7_B8);
     }
 
-    public void changeC7_C8(ActionEvent event) {
-        if(C7_C8.isSelected()) {
-            if(elementy.getValue() == "Przewod") {
-                im_C7_C8.setImage(przewod2);
-            }
-            else if(elementy.getValue() == "Rezystor 330") {
-                im_C7_C8.setImage(rezystor330);
-            }
-        }
-        else im_C7_C8.setImage(brak);
-    }
-    public void changeC8_C9(ActionEvent event) {
-        if(C8_C9.isSelected()) {
-            if(elementy.getValue() == "Przewod") {
-                im_C8_C9.setImage(przewod2);
-            }
-            else if(elementy.getValue() == "Rezystor 330") {
-                im_C8_C9.setImage(rezystor330);
-            }
-        }
-        else im_C8_C9.setImage(brak);
+    public void changeB8_B9() {
+        change_horizontal(B8_B9, im_B8_B9);
     }
 
-    public void changeC9_C10(ActionEvent event) {
-        if(C9_C10.isSelected()) {
-            if(elementy.getValue() == "Przewod") {
-                im_C9_C10.setImage(przewod2);
-            }
-            else if(elementy.getValue() == "Rezystor 330") {
-                im_C9_C10.setImage(rezystor330);
-            }
-        }
-        else im_C9_C10.setImage(brak);
+    public void changeB9_B10() {
+        change_horizontal(B9_B10, im_B9_B10);
     }
 
-    public void changeD1_D2(ActionEvent event) {
-        if(D1_D2.isSelected()) {
-            if(elementy.getValue() == "Przewod") {
-                im_D1_D2.setImage(przewod2);
-            }
-            else if(elementy.getValue() == "Rezystor 330") {
-                im_D1_D2.setImage(rezystor330);
-            }
-        }
-        else im_D1_D2.setImage(brak);
+    public void changeC1_C2() {
+        change_horizontal(C1_C2, im_C1_C2);
     }
 
-    public void changeD2_D3(ActionEvent event) {
-        if(D2_D3.isSelected()) {
-            if(elementy.getValue() == "Przewod") {
-                im_D2_D3.setImage(przewod2);
-            }
-            else if(elementy.getValue() == "Rezystor 330") {
-                im_D2_D3.setImage(rezystor330);
-            }
-        }
-        else im_D2_D3.setImage(brak);
+    public void changeC2_C3() {
+        change_horizontal(C2_C3, im_C2_C3);
     }
 
-    public void changeD3_D4(ActionEvent event) {
-        if(D3_D4.isSelected()) {
-            if(elementy.getValue() == "Przewod") {
-                im_D3_D4.setImage(przewod2);
-            }
-            else if(elementy.getValue() == "Rezystor 330") {
-                im_D3_D4.setImage(rezystor330);
-            }
-        }
-        else im_D3_D4.setImage(brak);
-    }
-    public void changeD4_D5(ActionEvent event) {
-        if(D4_D5.isSelected()) {
-            if(elementy.getValue() == "Przewod") {
-                im_D4_D5.setImage(przewod2);
-            }
-            else if(elementy.getValue() == "Rezystor 330") {
-                im_D4_D5.setImage(rezystor330);
-            }
-        }
-        else im_D4_D5.setImage(brak);
-    }
-    public void changeD5_D6(ActionEvent event) {
-        if(D5_D6.isSelected()) {
-            if(elementy.getValue() == "Przewod") {
-                im_D5_D6.setImage(przewod2);
-            }
-            else if(elementy.getValue() == "Rezystor 330") {
-                im_D5_D6.setImage(rezystor330);
-            }
-        }
-        else im_D5_D6.setImage(brak);
+    public void changeC3_C4() {
+        change_horizontal(C3_C4, im_C3_C4);
     }
 
-    public void changeD6_D7(ActionEvent event) {
-        if(D6_D7.isSelected()) {
-            if(elementy.getValue() == "Przewod") {
-                im_D6_D7.setImage(przewod2);
-            }
-            else if(elementy.getValue() == "Rezystor 330") {
-                im_D6_D7.setImage(rezystor330);
-            }
-        }
-        else im_D6_D7.setImage(brak);
+    public void changeC4_C5() {
+        change_horizontal(C4_C5, im_C4_C5);
     }
 
-    public void changeD7_D8(ActionEvent event) {
-        if(D7_D8.isSelected()) {
-            if(elementy.getValue() == "Przewod") {
-                im_D7_D8.setImage(przewod2);
-            }
-            else if(elementy.getValue() == "Rezystor 330") {
-                im_D7_D8.setImage(rezystor330);
-            }
-        }
-        else im_D7_D8.setImage(brak);
+    public void changeC5_C6() {
+        change_horizontal(C5_C6, im_C5_C6);
     }
 
-    public void changeD8_D9(ActionEvent event) {
-        if(D8_D9.isSelected()) {
-            if(elementy.getValue() == "Przewod") {
-                im_D8_D9.setImage(przewod2);
-            }
-            else if(elementy.getValue() == "Rezystor 330") {
-                im_D8_D9.setImage(rezystor330);
-            }
-        }
-        else im_D8_D9.setImage(brak);
+    public void changeC6_C7() {
+        change_horizontal(C6_C7, im_C6_C7);
     }
 
-    public void changeD9_D10(ActionEvent event) {
-        if(D9_D10.isSelected()) {
-            if(elementy.getValue() == "Przewod") {
-                im_D9_D10.setImage(przewod2);
-            }
-            else if(elementy.getValue() == "Rezystor 330") {
-                im_D9_D10.setImage(rezystor330);
-            }
-        }
-        else im_D9_D10.setImage(brak);
+    public void changeC7_C8() {
+        change_horizontal(C7_C8, im_C7_C8);
     }
 
-    public void changeE1_E2(ActionEvent event) {
-        if(E1_E2.isSelected()) {
-            if(elementy.getValue() == "Przewod") {
-                im_E1_E2.setImage(przewod2);
-            }
-            else if(elementy.getValue() == "Rezystor 330") {
-                im_E1_E2.setImage(rezystor330);
-            }
-        }
-        else im_E1_E2.setImage(brak);
+    public void changeC8_C9() {
+        change_horizontal(C8_C9, im_C8_C9);
     }
 
-    public void changeE2_E3(ActionEvent event) {
-        if(E2_E3.isSelected()) {
-            if(elementy.getValue() == "Przewod") {
-                im_E2_E3.setImage(przewod2);
-            }
-            else if(elementy.getValue() == "Rezystor 330") {
-                im_E2_E3.setImage(rezystor330);
-            }
-        }
-        else im_E2_E3.setImage(brak);
+    public void changeC9_C10() {
+        change_horizontal(C9_C10, im_C9_C10);
     }
 
-    public void changeE3_E4(ActionEvent event) {
-        if(E3_E4.isSelected()) {
-            if(elementy.getValue() == "Przewod") {
-                im_E3_E4.setImage(przewod2);
-            }
-            else if(elementy.getValue() == "Rezystor 330") {
-                im_E3_E4.setImage(rezystor330);
-            }
-        }
-        else im_E3_E4.setImage(brak);
+    public void changeD1_D2() {
+        change_horizontal(D1_D2, im_D1_D2);
     }
 
-    public void changeE4_E5(ActionEvent event) {
-        if(E4_E5.isSelected()) {
-            if(elementy.getValue() == "Przewod") {
-                im_E4_E5.setImage(przewod2);
-            }
-            else if(elementy.getValue() == "Rezystor 330") {
-                im_E4_E5.setImage(rezystor330);
-            }
-        }
-        else im_E4_E5.setImage(brak);
-    }
-    public void changeE5_E6(ActionEvent event) {
-        if(E5_E6.isSelected()) {
-            if(elementy.getValue() == "Przewod") {
-                im_E5_E6.setImage(przewod2);
-            }
-            else if(elementy.getValue() == "Rezystor 330") {
-                im_E5_E6.setImage(rezystor330);
-            }
-        }
-
-        else im_E5_E6.setImage(brak);
+    public void changeD2_D3() {
+        change_horizontal(D2_D3, im_D2_D3);
     }
 
-    public void changeE6_E7(ActionEvent event) {
-        if(E6_E7.isSelected()) {
-            if(elementy.getValue() == "Przewod") {
-                im_E6_E7.setImage(przewod2);
-            }
-            else if(elementy.getValue() == "Rezystor 330") {
-                im_E6_E7.setImage(rezystor330);
-            }
-        }
-        else im_E6_E7.setImage(brak);
+    public void changeD3_D4() {
+        change_horizontal(D3_D4, im_D3_D4);
     }
 
-
-    public void changeE7_E8(ActionEvent event) {
-        if(E7_E8.isSelected()) {
-            if(elementy.getValue() == "Przewod") {
-                im_E7_E8.setImage(przewod2);
-            }
-            else if(elementy.getValue() == "Rezystor 330") {
-                im_E7_E8.setImage(rezystor330);
-            }
-        }
-        else im_E7_E8.setImage(brak);
+    public void changeD4_D5() {
+        change_horizontal(D4_D5, im_D4_D5);
     }
 
-    public void changeE8_E9(ActionEvent event) {
-        if(E8_E9.isSelected()) {
-            if(elementy.getValue() == "Przewod") {
-                im_E8_E9.setImage(przewod2);
-            }
-            else if(elementy.getValue() == "Rezystor 330") {
-                im_E8_E9.setImage(rezystor330);
-            }
-        }
-        else im_E8_E9.setImage(brak);
+    public void changeD5_D6() {
+        change_horizontal(D5_D6, im_D5_D6);
     }
 
-    public void changeE9_E10(ActionEvent event) {
-        if(E9_E10.isSelected()) {
-            if(elementy.getValue() == "Przewod") {
-                im_E9_E10.setImage(przewod2);
-            }
-            else if(elementy.getValue() == "Rezystor 330") {
-                im_E9_E10.setImage(rezystor330);
-            }
-        }
-        else im_E9_E10.setImage(brak);
+    public void changeD6_D7() {
+        change_horizontal(D6_D7, im_D6_D7);
     }
 
-    public void changeE2_F2(ActionEvent event) {
-        if(E2_F2.isSelected()) {
-            if(elementy.getValue() == "Przewod") {
-                im_E2_F2.setImage(przewod);
-            }
-            else if(elementy.getValue() == "Rezystor 330") {
-                im_E2_F2.setImage(rezystor330);
-            }
-        }
-        else im_E2_F2.setImage(brak);
+    public void changeD7_D8() {
+        change_horizontal(D7_D8, im_D7_D8);
     }
 
-    public void changeE3_F3(ActionEvent event) {
-        if(E3_F3.isSelected()) {
-            if(elementy.getValue() == "Przewod") {
-                im_E3_F3.setImage(przewod);
-            }
-            else if(elementy.getValue() == "Rezystor 330") {
-                im_E3_F3.setImage(rezystor330);
-            }
-        }
-        else im_E3_F3.setImage(brak);
+    public void changeD8_D9() {
+        change_horizontal(D8_D9, im_D8_D9);
     }
 
-    public void changeE4_F4(ActionEvent event) {
-        if(E4_F4.isSelected()) {
-            if(elementy.getValue() == "Przewod") {
-                im_E4_F4.setImage(przewod);
-            }
-            else if(elementy.getValue() == "Rezystor 330") {
-                im_E4_F4.setImage(rezystor330);
-            }
-        }
-        else im_E4_F4.setImage(brak);
+    public void changeD9_D10() {
+        change_horizontal(D9_D10, im_D9_D10);
     }
 
-    public void changeE5_F5(ActionEvent event) {
-        if(E5_F5.isSelected()) {
-            if(elementy.getValue() == "Przewod") {
-                im_E5_F5.setImage(przewod);
-            }
-            else if(elementy.getValue() == "Rezystor 330") {
-                im_E5_F5.setImage(rezystor330);
-            }
-        }
-        else im_E5_F5.setImage(brak);
+    public void changeE1_E2() {
+        change_horizontal(E1_E2, im_E1_E2);
     }
 
-    public void changeE6_F6(ActionEvent event) {
-        if(E6_F6.isSelected()) {
-            if(elementy.getValue() == "Przewod") {
-                im_E6_F6.setImage(przewod);
-            }
-            else if(elementy.getValue() == "Rezystor 330") {
-                im_E6_F6.setImage(rezystor330);
-            }
-        }
-        else im_E6_F6.setImage(brak);
+    public void changeE2_E3() {
+        change_horizontal(E2_E3, im_E2_E3);
     }
 
-    public void changeE7_F7(ActionEvent event) {
-        if(E7_F7.isSelected()) {
-            if(elementy.getValue() == "Przewod") {
-                im_E7_F7.setImage(przewod);
-            }
-            else if(elementy.getValue() == "Rezystor 330") {
-                im_E7_F7.setImage(rezystor330);
-            }
-        }
-        else im_E7_F7.setImage(brak);
+    public void changeE3_E4() {
+        change_horizontal(E3_E4, im_E3_E4);
     }
 
-
-    public void changeE8_F8(ActionEvent event) {
-        if(E8_F8.isSelected()) {
-            if(elementy.getValue() == "Przewod") {
-                im_E8_F8.setImage(przewod);
-            }
-            else if(elementy.getValue() == "Rezystor 330") {
-                im_E8_F8.setImage(rezystor330);
-            }
-        }
-        else im_E8_F8.setImage(brak);
+    public void changeE4_E5() {
+        change_horizontal(E4_E5, im_E4_E5);
     }
 
-    public void changeE9_F9(ActionEvent event) {
-        if(E9_F9.isSelected()) {
-            if(elementy.getValue() == "Przewod") {
-                im_E9_F9.setImage(przewod);
-            }
-            else if(elementy.getValue() == "Rezystor 330") {
-                im_E9_F9.setImage(rezystor330);
-            }
-        }
-        else im_E9_F9.setImage(brak);
+    public void changeE5_E6() {
+        change_horizontal(E5_E6, im_E5_E6);
+    }
+
+    public void changeE6_E7() {
+        change_horizontal(E6_E7, im_E6_E7);
+    }
+
+    public void changeE7_E8() {
+        change_horizontal(E7_E8, im_E7_E8);
+    }
+
+    public void changeE8_E9() {
+        change_horizontal(E8_E9, im_E8_E9);
+    }
+
+    public void changeE9_E10() {
+        change_horizontal(E9_E10, im_E9_E10);
+    }
+
+    public void changeE2_F2() {
+        change_vertical(E2_F2, im_E2_F2);
+    }
+
+    public void changeE3_F3() {
+        change_vertical(E3_F3, im_E3_F3);
+    }
+
+    public void changeE4_F4() {
+        change_vertical(E4_F4, im_E4_F4);
+    }
+
+    public void changeE5_F5() {
+        change_vertical(E5_F5, im_E5_F5);
+    }
+
+    public void changeE6_F6() {
+        change_vertical(E6_F6, im_E6_F6);
+    }
+
+    public void changeE7_F7() {
+        change_vertical(E7_F7, im_E7_F7);
+    }
+
+    public void changeE8_F8() {
+        change_vertical(E8_F8, im_E8_F8);
+    }
+
+    public void changeE9_F9() {
+        change_vertical(E9_F9, im_E9_F9);
     }
 }

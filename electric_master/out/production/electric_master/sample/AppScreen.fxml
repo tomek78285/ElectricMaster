@@ -17,7 +17,7 @@
       <Button layoutX="643.0" layoutY="548.0" mnemonicParsing="false" onAction="#backMenu" prefHeight="41.0" prefWidth="88.0" text="Wstecz" />
       <ImageView fitHeight="423.0" fitWidth="731.0" layoutX="204.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@plytkaObramowanie.png" />
+            <Image url="@img/plytkaObramowanie.png" />
          </image>
       </ImageView>
       <Label layoutX="245.0" layoutY="12.0" prefHeight="34.0" prefWidth="47.0" text="1">
@@ -109,8 +109,6 @@
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1e1e1e" height="131.0" layoutX="103.0" layoutY="144.0" stroke="BLACK" strokeType="INSIDE" width="88.0" />
       <Line endX="147.0" endY="144.0" startX="236.0" startY="83.0" stroke="#290feb" />
       <Line endX="137.0" endY="265.0" layoutX="10.0" layoutY="10.0" startX="218.0" startY="354.0" stroke="#dd1010" />
-      <Line endX="737.0" endY="58.0" layoutX="10.0" layoutY="10.0" startX="934.0" startY="20.0" stroke="#290feb" />
-      <Line endX="729.0" endY="342.0" layoutX="10.0" layoutY="10.0" startX="925.0" startY="268.0" stroke="#dd1010" />
       <Line endX="136.0" endY="125.87867736816406" layoutX="20.0" layoutY="37.0" startX="120.0" startY="125.87867736816406" stroke="#3373da" strokeWidth="3.0" />
       <Line endX="167.0" endY="112.0" layoutX="-20.0" layoutY="126.0" startX="167.0" startY="133.0" stroke="#ee0909" strokeWidth="3.0" />
       <CheckBox fx:id="A3_B3" layoutX="92.0" layoutY="506.0" mnemonicParsing="false" onAction="#changeA3_B3" text="A3-B3" />
