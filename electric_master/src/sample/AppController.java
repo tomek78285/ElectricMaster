@@ -9,13 +9,21 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
+import java.util.ArrayList;
+
 public class AppController {
 
     private MainController mainController;
     double napiecie = 9;
+    double natezenie;
+    double rezystancja;
+
+    ArrayList<String> sekcja = new ArrayList<>();
 
     @FXML
-    public CheckBox A2_B2;
+    private Label miernik;
+    @FXML
+    private CheckBox A2_B2;
     @FXML
     private CheckBox A3_B3;
     @FXML
@@ -30,8 +38,6 @@ public class AppController {
     private CheckBox A8_B8;
     @FXML
     private CheckBox A9_B9;
-    @FXML
-    private CheckBox A10_B10;
     @FXML
     private CheckBox B1_B2;
     @FXML
@@ -256,6 +262,17 @@ public class AppController {
     Image brak = new Image(getClass().getResourceAsStream("img/brak.png"));
     Image brak2 = new Image(getClass().getResourceAsStream("img/brak2.png"));
 
+    public boolean SECTION_1 = false;
+    public boolean SECTION_2 = false;
+    public boolean SECTION_3 = false;
+    public boolean SECTION_4 = false;
+    public boolean SECTION_5 = false;
+    public boolean SECTION_6 = false;
+    public boolean SECTION_7 = false;
+    public boolean SECTION_8 = false;
+    public boolean SECTION_9 = false;
+    public boolean SECTION_10 = false;
+
     public void initialize() {
         elementy.getItems().add("Przewod");
         elementy.getItems().add("Rezystor 100");
@@ -277,71 +294,68 @@ public class AppController {
         this.mainController = mainController;
     }
 
-
     public void change_vertical(CheckBox checkBox, ImageView image) {
-        if(checkBox.isSelected()) {
-            if(elementy.getValue() == "Przewod") {
+        if (checkBox.isSelected()) {
+            if (elementy.getValue() == "Przewod") {
                 image.setImage(przewod);
-            }
-            else if(elementy.getValue() == "Rezystor 100") {
+            } else if (elementy.getValue() == "Rezystor 100") {
                 image.setImage(rezystor100);
-            }
-            else if(elementy.getValue() == "Rezystor 330") {
+                if (czyAktywne(checkBox)) rezystancja += 100;
+                miernik.setText(" " + rezystancja);
+            } else if (elementy.getValue() == "Rezystor 330") {
                 image.setImage(rezystor330);
-            }
-            else if(elementy.getValue() == "Rezystor 1k") {
+                if (czyAktywne(checkBox)) rezystancja += 330;
+                miernik.setText(" " + rezystancja);
+            } else if (elementy.getValue() == "Rezystor 1k") {
                 image.setImage(rezystor1k);
-            }
-            else if(elementy.getValue() == "Rezystor 10k") {
+                if (czyAktywne(checkBox)) rezystancja += 1000;
+                miernik.setText(" " + rezystancja);
+            } else if (elementy.getValue() == "Rezystor 10k") {
                 image.setImage(rezystor10k);
-            }
-            else if(elementy.getValue() == "Kondensator 100nf") {
+                if (czyAktywne(checkBox)) rezystancja += 10000;
+                miernik.setText(" " + rezystancja);
+            } else if (elementy.getValue() == "Kondensator 100nf") {
                 image.setImage(kondensator100nf);
-            }
-            else if(elementy.getValue() == "Kondensator 220uf") {
+            } else if (elementy.getValue() == "Kondensator 220uf") {
                 image.setImage(kondensator220uf);
-            }
-            else if(elementy.getValue() == "Kondensator 1000uf") {
+            } else if (elementy.getValue() == "Kondensator 1000uf") {
                 image.setImage(kondensator1000uf);
-            }
-            else if(elementy.getValue() == "Dioda krzemowa") {
+            } else if (elementy.getValue() == "Dioda krzemowa") {
                 image.setImage(dioda_krzemowa);
             }
+        } else {
+            image.setImage(brak2);
+            rezystancja -= 10000;
         }
-        else image.setImage(brak2);
     }
 
     public void change_horizontal(CheckBox checkBox, ImageView image) {
-        if(checkBox.isSelected()) {
-            if(elementy.getValue() == "Przewod") {
+        if (checkBox.isSelected()) {
+            if (elementy.getValue() == "Przewod") {
                 image.setImage(przewod2);
-            }
-            else if(elementy.getValue() == "Rezystor 100") {
+            } else if (elementy.getValue() == "Rezystor 100") {
                 image.setImage(rezystor100_2);
-            }
-            else if(elementy.getValue() == "Rezystor 330") {
+            } else if (elementy.getValue() == "Rezystor 330") {
                 image.setImage(rezystor330_2);
-            }
-            else if(elementy.getValue() == "Rezystor 1k") {
+            } else if (elementy.getValue() == "Rezystor 1k") {
                 image.setImage(rezystor1k_2);
-            }
-            else if(elementy.getValue() == "Rezystor 10k") {
+            } else if (elementy.getValue() == "Rezystor 10k") {
                 image.setImage(rezystor10k_2);
-            }
-            else if(elementy.getValue() == "Kondensator 100nf") {
+                if (czyAktywne(checkBox)) {
+                    rezystancja += 10000;
+                }
+                miernik.setText(" " + rezystancja);
+                System.out.println(rezystancja);
+            } else if (elementy.getValue() == "Kondensator 100nf") {
                 image.setImage(kondensator100nf_2);
-            }
-            else if(elementy.getValue() == "Kondensator 220uf") {
+            } else if (elementy.getValue() == "Kondensator 220uf") {
                 image.setImage(kondensator220uf_2);
-            }
-            else if(elementy.getValue() == "Kondensator 1000uf") {
+            } else if (elementy.getValue() == "Kondensator 1000uf") {
                 image.setImage(kondensator1000uf_2);
-            }
-            else if(elementy.getValue() == "Dioda krzemowa") {
+            } else if (elementy.getValue() == "Dioda krzemowa") {
                 image.setImage(dioda_krzemowa_2);
             }
-        }
-        else image.setImage(brak);
+        } else image.setImage(brak);
     }
 
     public void changeA2_B2() {
@@ -550,5 +564,109 @@ public class AppController {
 
     public void changeE9_F9() {
         change_vertical(E9_F9, im_E9_F9);
+    }
+
+    public boolean czyAktywne(CheckBox checkbox) {
+        String nazwa;
+        nazwa = checkbox.getId();
+        if (nazwa.charAt(0) == 'A' || nazwa.charAt(3) == 'F') {
+            if (nazwa.charAt(1) == '2') {
+                if (SECTION_2 == false) SECTION_2 = true;
+                return true;
+            }
+            if (nazwa.charAt(1) == '3') {
+                if (SECTION_3 == false) SECTION_3 = true;
+                return true;
+            }
+            if (nazwa.charAt(1) == '4') {
+                if (SECTION_4 == false) SECTION_4 = true;
+                return true;
+            }
+            if (nazwa.charAt(1) == '5') {
+                if (SECTION_5 == false) SECTION_5 = true;
+                return true;
+            }
+            if (nazwa.charAt(1) == '6') {
+                if (SECTION_6 == false) SECTION_6 = true;
+                return true;
+            }
+            if (nazwa.charAt(1) == '7') {
+                if (SECTION_7 == false) SECTION_7 = true;
+                return true;
+            }
+            if (nazwa.charAt(1) == '8') {
+                if (SECTION_8 == false) SECTION_8 = true;
+                return true;
+            }
+            if (nazwa.charAt(1) == '9') {
+                if (SECTION_9 == false) SECTION_9 = true;
+                return true;
+            }
+        }
+        if (nazwa.charAt(1) == '1') {
+            if (SECTION_1 == true || SECTION_2 == true) {
+                SECTION_1 = true;
+                SECTION_2 = true;
+
+                return true;
+            } else return false;
+        } else if (nazwa.charAt(1) == '2') {
+            if (SECTION_2 == true || SECTION_3 == true) {
+                SECTION_2 = true;
+                SECTION_3 = true;
+
+                return true;
+            } else return false;
+        } else if (nazwa.charAt(1) == '3') {
+            if (SECTION_3 == true || SECTION_4 == true) {
+                SECTION_3 = true;
+                SECTION_4 = true;
+
+                return true;
+            } else return false;
+        } else if (nazwa.charAt(1) == '4') {
+            if (SECTION_4 == true || SECTION_5 == true) {
+                SECTION_4 = true;
+                SECTION_5 = true;
+
+                return true;
+            } else return false;
+        } else if (nazwa.charAt(1) == '5') {
+            if (SECTION_5 == true || SECTION_6 == true) {
+                SECTION_5 = true;
+                SECTION_6 = true;
+
+                return true;
+            } else return false;
+        } else if (nazwa.charAt(1) == '6') {
+            if (SECTION_6 == true || SECTION_7 == true) {
+                SECTION_6 = true;
+                SECTION_7 = true;
+
+                return true;
+            } else return false;
+        } else if (nazwa.charAt(1) == '7') {
+            if (SECTION_7 == true || SECTION_8 == true) {
+                SECTION_7 = true;
+                SECTION_8 = true;
+
+                return true;
+            } else return false;
+        } else if (nazwa.charAt(1) == '8') {
+            if (SECTION_8 == true || SECTION_9 == true) {
+                SECTION_8 = true;
+                SECTION_9 = true;
+
+                return true;
+            } else return false;
+        } else if (nazwa.charAt(1) == '9') {
+            if (SECTION_9 == true || SECTION_10 == true) {
+                SECTION_9 = true;
+                SECTION_10 = true;
+
+                return true;
+            } else return false;
+        }
+        return false;
     }
 }
