@@ -9,7 +9,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import java.util.ArrayList;
 
-public class AppController {
+public class PrawoOhmaController {
 
     private MainController mainController;
     double napiecie = 9;
@@ -236,6 +236,8 @@ public class AppController {
     @FXML
     private ImageView im_E9_F9;
     @FXML
+    private ImageView ohm1;
+    @FXML
     private TextField wynik;
     @FXML
     private ChoiceBox elementy;
@@ -260,6 +262,7 @@ public class AppController {
     Image dioda_krzemowa_2 = new Image(getClass().getResourceAsStream("img/dioda_krzemowa_2.png"));
     Image brak = new Image(getClass().getResourceAsStream("img/brak.png"));
     Image brak2 = new Image(getClass().getResourceAsStream("img/brak2.png"));
+    Image ohm_1 = new Image(getClass().getResourceAsStream("img/ohm_1.png"));
 
     public boolean SECTION_1 = false;
     public boolean SECTION_2 = false;
@@ -282,6 +285,7 @@ public class AppController {
         elementy.getItems().add("Kondensator 220uf");
         elementy.getItems().add("Kondensator 1000uf");
         elementy.getItems().add("Dioda krzemowa");
+        ohm1.setImage(ohm_1);
     }
 
     @FXML

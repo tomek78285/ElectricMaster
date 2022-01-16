@@ -8,11 +8,8 @@ import javafx.scene.layout.Pane;
 import java.io.IOException;
 
 public class MenuController {
-
-    private MainController mainController;
-    @FXML
-    public void openApplication() {
-        FXMLLoader loader = new FXMLLoader(this.getClass().getResource("AppScreen.fxml"));
+    public void openWindow(String window) {
+        FXMLLoader loader = new FXMLLoader(this.getClass().getResource(window));
         Pane pane = null;
         try {
             pane = loader.load();
@@ -23,6 +20,33 @@ public class MenuController {
         appController.setMainController(mainController);
         mainController.setScreen(pane);
     }
+
+    @FXML
+    private MainController mainController;
+
+    @FXML
+    public void openApplication() { openWindow("AppScreen.fxml");}
+
+    @FXML
+    public void openPrawoOhma() { openWindow("PrawoOhma.fxml");}
+
+    @FXML
+    public void openPodstawy() { openWindow("Podstawy.fxml");}
+
+    @FXML
+    public void openPrawoOhmaNauka() { openWindow("PrawoOhma.fxml");}
+
+    @FXML
+    public void openPrawoKirchhoffa_1_Nauka() { openWindow("PrawoOhma.fxml");}
+
+    @FXML
+    public void openPrawoKirchhoffa_2_Nauka() { openWindow("PrawoOhma.fxml");}
+
+    @FXML
+    public void openPrawoKirchhoffa_1() { openWindow("PrawoOhma.fxml");}
+
+    @FXML
+    public void openPrawoKirchhoffa_2() { openWindow("PrawoOhma.fxml");}
 
     @FXML
     public void exit() {

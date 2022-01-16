@@ -215,6 +215,10 @@
       <ImageView fx:id="im_D4_D5" fitHeight="17.0" fitWidth="62.0" layoutX="403.0" layoutY="340.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fx:id="im_D3_D4" fitHeight="17.0" fitWidth="62.0" layoutX="346.0" layoutY="334.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fx:id="im_D2_D3" fitHeight="17.0" fitWidth="62.0" layoutX="290.0" layoutY="334.0" pickOnBounds="true" preserveRatio="true" />
-      <Label fx:id="miernik" layoutX="452.0" layoutY="37.0" prefHeight="62.0" prefWidth="195.0" text="Label" />
+      <Label fx:id="miernik" layoutX="349.0" layoutY="53.0" prefHeight="41.0" prefWidth="56.0" text="0" />
+      <Label layoutX="259.0" layoutY="48.0" prefHeight="50.0" prefWidth="70.0" text="Rezystancja " />
+      <Label layoutX="399.0" layoutY="49.0" prefHeight="50.0" prefWidth="70.0" text="Napięcie" />
+      <Label fx:id="miernik_nap" layoutX="471.0" layoutY="54.0" prefHeight="41.0" prefWidth="56.0" text="9 A" />
+      <Button fx:id="buttonClear" layoutX="654.0" layoutY="529.0" mnemonicParsing="false" onAction="#clear_all" prefHeight="50.0" prefWidth="143.0" text="Wyczyść wszystko" />
    </children>
 </Pane>
