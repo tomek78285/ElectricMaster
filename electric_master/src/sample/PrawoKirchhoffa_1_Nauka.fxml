@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="679.0" prefWidth="788.0" style="-fx-background-image: img\miernij.jpg;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.PodstawyController">
+   <children>
+      <Label layoutX="214.0" layoutY="31.0" prefHeight="54.0" prefWidth="388.0" text="I PRAWO KIRCHHOFFA">
+         <font>
+            <Font size="33.0" />
+         </font>
+      </Label>
+      <Button layoutX="36.0" layoutY="23.0" mnemonicParsing="false" onAction="#backMenu" prefHeight="46.0" prefWidth="88.0" text="Wróć" />
+      <ImageView fitHeight="379.0" fitWidth="462.0" layoutX="152.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/pierwsze-prawo-kirchhoffa.png" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>

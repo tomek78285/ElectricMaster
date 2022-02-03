@@ -18,8 +18,6 @@ public class AppController {
     ArrayList<CheckBox> POLA = new ArrayList<>();
 
     @FXML
-    private Label miernik;
-    @FXML
     private Label miernik_nap;
     @FXML
     private CheckBox A2_B2;
@@ -236,6 +234,94 @@ public class AppController {
     @FXML
     private ImageView im_E9_F9;
     @FXML
+    private ImageView pomiarPrimary1;
+    @FXML
+    private ImageView pomiarPrimary2;
+    @FXML
+    private ImageView pomiarB1_B5;
+    @FXML
+    private ImageView pomiarB6_B10;
+    @FXML
+    private ImageView pomiarB;
+    @FXML
+    private ImageView pomiarB_C1;
+    @FXML
+    private ImageView pomiarB_C2;
+    @FXML
+    private ImageView pomiarB_C3;
+    @FXML
+    private ImageView pomiarB_C4;
+    @FXML
+    private ImageView pomiarB_C5;
+    @FXML
+    private ImageView pomiarB_C6;
+    @FXML
+    private ImageView pomiarB_C7;
+    @FXML
+    private ImageView pomiarB_C8;
+    @FXML
+    private ImageView pomiarB_C9;
+    @FXML
+    private ImageView pomiarC1;
+    @FXML
+    private ImageView pomiarC2;
+    @FXML
+    private ImageView pomiarC3;
+    @FXML
+    private ImageView pomiarC4;
+    @FXML
+    private ImageView pomiarC5;
+    @FXML
+    private ImageView pomiarC6;
+    @FXML
+    private ImageView pomiarC7;
+    @FXML
+    private ImageView pomiarC8;
+    @FXML
+    private ImageView pomiarC9;
+    @FXML
+    private ImageView pomiarE;
+    @FXML
+    private ImageView pomiarE_D1;
+    @FXML
+    private ImageView pomiarE_D2;
+    @FXML
+    private ImageView pomiarE_D3;
+    @FXML
+    private ImageView pomiarE_D4;
+    @FXML
+    private ImageView pomiarE_D5;
+    @FXML
+    private ImageView pomiarE_D6;
+    @FXML
+    private ImageView pomiarE_D7;
+    @FXML
+    private ImageView pomiarE_D8;
+    @FXML
+    private ImageView pomiarE_D9;
+    @FXML
+    private ImageView pomiarD1;
+    @FXML
+    private ImageView pomiarD2;
+    @FXML
+    private ImageView pomiarD3;
+    @FXML
+    private ImageView pomiarD4;
+    @FXML
+    private ImageView pomiarD5;
+    @FXML
+    private ImageView pomiarD6;
+    @FXML
+    private ImageView pomiarD7;
+    @FXML
+    private ImageView pomiarD8;
+    @FXML
+    private ImageView pomiarD9;
+    @FXML
+    private ImageView pomiarE1_E5;
+    @FXML
+    private ImageView pomiarE6_E10;
+    @FXML
     private TextField wynik;
     @FXML
     private ChoiceBox elementy;
@@ -256,10 +342,50 @@ public class AppController {
     Image kondensator220uf_2 = new Image(getClass().getResourceAsStream("img/kondensator220_2.png"));
     Image kondensator1000uf = new Image(getClass().getResourceAsStream("img/kondensator1000.png"));
     Image kondensator1000uf_2 = new Image(getClass().getResourceAsStream("img/kondensator1000_2.png"));
-    Image dioda_krzemowa = new Image(getClass().getResourceAsStream("img/dioda_krzemowa.png"));
-    Image dioda_krzemowa_2 = new Image(getClass().getResourceAsStream("img/dioda_krzemowa_2.png"));
+    Image dioda_led = new Image(getClass().getResourceAsStream("img/dioda_ledOFF.png"));
+    Image dioda_led_2 = new Image(getClass().getResourceAsStream("img/dioda_led_2OFF.png"));
+    Image dioda_ledON = new Image(getClass().getResourceAsStream("img/dioda_ledON.png"));
+    Image dioda_led_2ON = new Image(getClass().getResourceAsStream("img/dioda_led_2ON.png"));
     Image brak = new Image(getClass().getResourceAsStream("img/brak.png"));
     Image brak2 = new Image(getClass().getResourceAsStream("img/brak2.png"));
+    Image pomiar = new Image(getClass().getResourceAsStream("img/pomiar.png"));
+    Image pomiarB2 = new Image(getClass().getResourceAsStream("img/pomiarB2.png"));
+    Image pomiarB3 = new Image(getClass().getResourceAsStream("img/pomiarB3.png"));
+    Image pomiarB4 = new Image(getClass().getResourceAsStream("img/pomiarB4.png"));
+    Image pomiarB5 = new Image(getClass().getResourceAsStream("img/pomiarB5.png"));
+    Image pomiarB6 = new Image(getClass().getResourceAsStream("img/pomiarB6.png"));
+    Image pomiarB7 = new Image(getClass().getResourceAsStream("img/pomiarB7.png"));
+    Image pomiarB8 = new Image(getClass().getResourceAsStream("img/pomiarB8.png"));
+    Image pomiarB9 = new Image(getClass().getResourceAsStream("img/pomiarB9.png"));
+    Image pomiarB10 = new Image(getClass().getResourceAsStream("img/pomiarB10.png"));
+    Image pomiarC = new Image(getClass().getResourceAsStream("img/pomiarC.png"));
+    Image pomiar_C2 = new Image(getClass().getResourceAsStream("img/pomiarC2.png"));
+    Image pomiarBC = new Image(getClass().getResourceAsStream("img/pomiarB_C.png"));
+    Image PC2 = new Image(getClass().getResourceAsStream("img/PC2.png"));
+    Image PC3 = new Image(getClass().getResourceAsStream("img/PC3.png"));
+    Image PC4 = new Image(getClass().getResourceAsStream("img/PC4.png"));
+    Image PC5 = new Image(getClass().getResourceAsStream("img/PC5.png"));
+    Image PC6 = new Image(getClass().getResourceAsStream("img/PC6.png"));
+    Image PC7 = new Image(getClass().getResourceAsStream("img/PC7.png"));
+    Image PC8 = new Image(getClass().getResourceAsStream("img/PC8.png"));
+    Image PC9 = new Image(getClass().getResourceAsStream("img/PC9.png"));
+    Image PD2 = new Image(getClass().getResourceAsStream("img/PD2.png"));
+    Image PD3 = new Image(getClass().getResourceAsStream("img/PD3.png"));
+    Image PD4 = new Image(getClass().getResourceAsStream("img/PD4.png"));
+    Image PD5 = new Image(getClass().getResourceAsStream("img/PD5.png"));
+    Image PD6 = new Image(getClass().getResourceAsStream("img/PD6.png"));
+    Image PD7 = new Image(getClass().getResourceAsStream("img/PD7.png"));
+    Image PD8 = new Image(getClass().getResourceAsStream("img/PD8.png"));
+    Image PD9 = new Image(getClass().getResourceAsStream("img/PD9.png"));
+    Image pomiarE2 = new Image(getClass().getResourceAsStream("img/pomiarE2.png"));
+    Image pomiarE3 = new Image(getClass().getResourceAsStream("img/pomiarE3.png"));
+    Image pomiarE4 = new Image(getClass().getResourceAsStream("img/pomiarE4.png"));
+    Image pomiarE5 = new Image(getClass().getResourceAsStream("img/pomiarE5.png"));
+    Image pomiarE6 = new Image(getClass().getResourceAsStream("img/pomiarE6.png"));
+    Image pomiarE7 = new Image(getClass().getResourceAsStream("img/pomiarE7.png"));
+    Image pomiarE8 = new Image(getClass().getResourceAsStream("img/pomiarE8.png"));
+    Image pomiarE9 = new Image(getClass().getResourceAsStream("img/pomiarE9.png"));
+    Image pomiarE10 = new Image(getClass().getResourceAsStream("img/pomiarE10.png"));
 
     public boolean SECTION_1 = false;
     public boolean SECTION_2 = false;
@@ -272,16 +398,18 @@ public class AppController {
     public boolean SECTION_9 = false;
     public boolean SECTION_10 = false;
 
+    ArrayList<String> ElDodane = new ArrayList<>();
+
     public void initialize() {
         elementy.getItems().add("Przewod");
         elementy.getItems().add("Rezystor 100");
         elementy.getItems().add("Rezystor 330");
         elementy.getItems().add("Rezystor 1k");
         elementy.getItems().add("Rezystor 10k");
-        elementy.getItems().add("Kondensator 100nf");
-        elementy.getItems().add("Kondensator 220uf");
-        elementy.getItems().add("Kondensator 1000uf");
-        elementy.getItems().add("Dioda krzemowa");
+//        elementy.getItems().add("Kondensator 100nf");
+//        elementy.getItems().add("Kondensator 220uf");
+//        elementy.getItems().add("Kondensator 1000uf");
+        elementy.getItems().add("Dioda LED");
     }
 
     @FXML
@@ -294,142 +422,536 @@ public class AppController {
     }
 
     public void clear_all() {
+        A2_B2.setDisable(false);
+        A2_B2.setSelected(false);
+        A3_B3.setDisable(false);
+        A3_B3.setSelected(false);
+        A4_B4.setDisable(false);
+        A4_B4.setSelected(false);
+        A5_B5.setDisable(false);
+        A5_B5.setSelected(false);
+        A6_B6.setDisable(false);
+        A6_B6.setSelected(false);
+        A7_B7.setDisable(false);
+        A7_B7.setSelected(false);
+        A8_B8.setDisable(false);
+        A8_B8.setSelected(false);
+        A9_B9.setDisable(false);
+        A9_B9.setSelected(false);
+
+        B1_B2.setDisable(false);
+        B1_B2.setSelected(false);
+        B2_B3.setDisable(false);
+        B2_B3.setSelected(false);
+        B3_B4.setDisable(false);
+        B3_B4.setSelected(false);
+        B4_B5.setDisable(false);
+        B4_B5.setSelected(false);
+        B5_B6.setDisable(false);
+        B5_B6.setSelected(false);
+        B6_B7.setDisable(false);
+        B6_B7.setSelected(false);
+        B7_B8.setDisable(false);
+        B7_B8.setSelected(false);
+        B8_B9.setDisable(false);
+        B8_B9.setSelected(false);
+        B9_B10.setDisable(false);
+        B9_B10.setSelected(false);
+
+        C1_C2.setDisable(false);
+        C1_C2.setSelected(false);
+        C2_C3.setDisable(false);
+        C2_C3.setSelected(false);
+        C3_C4.setDisable(false);
+        C3_C4.setSelected(false);
+        C4_C5.setDisable(false);
+        C4_C5.setSelected(false);
+        C5_C6.setDisable(false);
+        C5_C6.setSelected(false);
+        C6_C7.setDisable(false);
+        C6_C7.setSelected(false);
+        C7_C8.setDisable(false);
+        C7_C8.setSelected(false);
+        C8_C9.setDisable(false);
+        C8_C9.setSelected(false);
+        C9_C10.setDisable(false);
+        C9_C10.setSelected(false);
+
+        D1_D2.setDisable(false);
+        D1_D2.setSelected(false);
+        D2_D3.setDisable(false);
+        D2_D3.setSelected(false);
+        D3_D4.setDisable(false);
+        D3_D4.setSelected(false);
+        D4_D5.setDisable(false);
+        D4_D5.setSelected(false);
+        D5_D6.setDisable(false);
+        D5_D6.setSelected(false);
+        D6_D7.setDisable(false);
+        D6_D7.setSelected(false);
+        D7_D8.setDisable(false);
+        D7_D8.setSelected(false);
+        D8_D9.setDisable(false);
+        D8_D9.setSelected(false);
+        D9_D10.setDisable(false);
+        D9_D10.setSelected(false);
+
+        E1_E2.setDisable(false);
+        E1_E2.setSelected(false);
+        E2_E3.setDisable(false);
+        E2_E3.setSelected(false);
+        E3_E4.setDisable(false);
+        E3_E4.setSelected(false);
+        E4_E5.setDisable(false);
+        E4_E5.setSelected(false);
+        E5_E6.setDisable(false);
+        E5_E6.setSelected(false);
+        E6_E7.setDisable(false);
+        E6_E7.setSelected(false);
+        E7_E8.setDisable(false);
+        E7_E8.setSelected(false);
+        E8_E9.setDisable(false);
+        E8_E9.setSelected(false);
+        E9_E10.setDisable(false);
+        E9_E10.setSelected(false);
+
+        E2_F2.setDisable(false);
+        E2_F2.setSelected(false);
+        E3_F3.setDisable(false);
+        E3_F3.setSelected(false);
+        E4_F4.setDisable(false);
+        E4_F4.setSelected(false);
+        E5_F5.setDisable(false);
+        E5_F5.setSelected(false);
+        E6_F6.setDisable(false);
+        E6_F6.setSelected(false);
+        E7_F7.setDisable(false);
+        E7_F7.setSelected(false);
+        E8_F8.setDisable(false);
+        E8_F8.setSelected(false);
         E9_F9.setDisable(false);
         E9_F9.setSelected(false);
+
         im_A2_B2.setImage(brak);
+        im_A3_B3.setImage(brak);
+        im_A4_B4.setImage(brak);
+        im_A5_B5.setImage(brak);
+        im_A6_B6.setImage(brak);
+        im_A7_B7.setImage(brak);
+        im_A8_B8.setImage(brak);
+        im_A9_B9.setImage(brak);
+
+        im_B1_B2.setImage(brak);
+        im_B2_B3.setImage(brak);
+        im_B3_B4.setImage(brak);
+        im_B4_B5.setImage(brak);
+        im_B5_B6.setImage(brak);
+        im_B6_B7.setImage(brak);
+        im_B7_B8.setImage(brak);
+        im_B8_B9.setImage(brak);
+
+        im_C1_C2.setImage(brak);
+        im_C2_C3.setImage(brak);
+        im_C3_C4.setImage(brak);
+        im_C4_C5.setImage(brak);
+        im_C5_C6.setImage(brak);
+        im_C6_C7.setImage(brak);
+        im_C7_C8.setImage(brak);
+        im_C8_C9.setImage(brak);
+
+        im_D1_D2.setImage(brak);
+        im_D2_D3.setImage(brak);
+        im_D3_D4.setImage(brak);
+        im_D4_D5.setImage(brak);
+        im_D5_D6.setImage(brak);
+        im_D6_D7.setImage(brak);
+        im_D7_D8.setImage(brak);
+        im_D8_D9.setImage(brak);
+
+        im_E1_E2.setImage(brak);
+        im_E2_E3.setImage(brak);
+        im_E3_E4.setImage(brak);
+        im_E4_E5.setImage(brak);
+        im_E5_E6.setImage(brak);
+        im_E6_E7.setImage(brak);
+        im_E7_E8.setImage(brak);
+        im_E8_E9.setImage(brak);
+
+        im_E2_F2.setImage(brak);
+        im_E3_F3.setImage(brak);
+        im_E4_F4.setImage(brak);
+        im_E5_F5.setImage(brak);
+        im_E6_F6.setImage(brak);
+        im_E7_F7.setImage(brak);
+        im_E8_F8.setImage(brak);
+        im_E9_F9.setImage(brak);
+
+
         rezystancja = 0;
-        miernik.setText(" " + rezystancja);
         miernik_nap.setText(" " + 9 / 1 + " A");
+        clear_pomiarUp();
+        clear_pomiarDown();
+        pomiarPrimary1.setImage(pomiar);
+        pomiarPrimary2.setImage(pomiar);
     }
 
-    public void licz_napiecie() {
+    public void clear_pomiarUp() {
+        pomiarPrimary1.setImage(brak);
+        pomiarB1_B5.setImage(brak);
+        pomiarB6_B10.setImage(brak);
+        pomiarB.setImage(brak);
+        pomiarB_C1.setImage(brak);
+        pomiarB_C2.setImage(brak);
+        pomiarB_C3.setImage(brak);
+        pomiarB_C4.setImage(brak);
+        pomiarB_C5.setImage(brak);
+        pomiarB_C6.setImage(brak);
+        pomiarB_C7.setImage(brak);
+        pomiarB_C8.setImage(brak);
+        pomiarC1.setImage(brak);
+        pomiarC2.setImage(brak);
+        pomiarC3.setImage(brak);
+        pomiarC4.setImage(brak);
+        pomiarC5.setImage(brak);
+        pomiarC6.setImage(brak);
+        pomiarC7.setImage(brak);
+        pomiarC8.setImage(brak);
+    }
+
+    public void clear_pomiarDown() {
+        pomiarPrimary2.setImage(brak);
+        pomiarE1_E5.setImage(brak);
+        pomiarE6_E10.setImage(brak);
+        pomiarE.setImage(brak);
+        pomiarE_D1.setImage(brak);
+        pomiarE_D2.setImage(brak);
+        pomiarE_D3.setImage(brak);
+        pomiarE_D4.setImage(brak);
+        pomiarE_D5.setImage(brak);
+        pomiarE_D6.setImage(brak);
+        pomiarE_D7.setImage(brak);
+        pomiarE_D8.setImage(brak);
+        pomiarD1.setImage(brak);
+        pomiarD2.setImage(brak);
+        pomiarD3.setImage(brak);
+        pomiarD4.setImage(brak);
+        pomiarD5.setImage(brak);
+        pomiarD6.setImage(brak);
+        pomiarD7.setImage(brak);
+        pomiarD8.setImage(brak);
+    }
+
+    public void licz_natezenie() {
         if (rezystancja == 0) {
             miernik_nap.setText(" " + 9 / 1 + " A");
         } else {
-            napiecie = napiecie/rezystancja;
-            napiecie *= 100;
+            napiecie = 9/rezystancja;
+            napiecie *= 1000000000;
             napiecie = Math.round(napiecie);
-            napiecie = napiecie/100;
-            miernik_nap.setText(napiecie + " A");
+            napiecie = napiecie/1000000000;
+            if(napiecie < 0.01) miernik_nap.setText(napiecie*1000 + " mA");
+            else miernik_nap.setText(napiecie + " A");
         }
     }
+
+    public void set_pomiar(CheckBox checkBox) {
+        String nazwa = checkBox.getId();
+        if (nazwa.charAt(3) == 'B') {
+            pomiarPrimary1.setImage(brak);
+            pomiarB.setImage(pomiar);
+            if(nazwa.charAt(4) == '2') {
+                pomiarB1_B5.setImage(pomiarB2);
+                pomiarB6_B10.setImage(pomiar);
+            }
+            else if(nazwa.charAt(4) == '3') {
+                pomiarB1_B5.setImage(pomiarB3);
+                pomiarB6_B10.setImage(pomiar);
+            }
+            else if(nazwa.charAt(4) == '4') {
+                pomiarB1_B5.setImage(pomiarB4);
+                pomiarB6_B10.setImage(pomiar);
+            }
+            else if(nazwa.charAt(4) == '5') {
+                pomiarB1_B5.setImage(pomiarB5);
+                pomiarB6_B10.setImage(pomiar);
+            }
+            else if(nazwa.charAt(4) == '6') {
+                pomiarB1_B5.setImage(brak);
+                pomiarB6_B10.setImage(pomiarB6);
+            }
+            else if(nazwa.charAt(4) == '7') {
+                pomiarB1_B5.setImage(brak);
+                pomiarB6_B10.setImage(pomiarB7);
+            }
+            else if(nazwa.charAt(4) == '8') {
+                pomiarB1_B5.setImage(brak);
+                pomiarB6_B10.setImage(pomiarB8);
+            }
+            else if(nazwa.charAt(4) == '9') {
+                pomiarB1_B5.setImage(brak);
+                pomiarB6_B10.setImage(pomiarB9);
+            }
+            else {
+                pomiarB1_B5.setImage(brak);
+                pomiarB6_B10.setImage(pomiarB10);
+            }
+        }
+        else if (nazwa.charAt(3) == 'C') {
+            clear_pomiarUp();
+            pomiarB.setImage(pomiar);
+            if(nazwa.charAt(4) == '2') {
+                pomiarB1_B5.setImage(PC2);
+                pomiarB_C1.setImage(pomiarBC);
+                pomiarC1.setImage(pomiar_C2);
+                pomiarB6_B10.setImage(pomiar);
+            }
+            else if(nazwa.charAt(4) == '3') {
+                pomiarB1_B5.setImage(PC3);
+                pomiarB_C2.setImage(pomiarBC);
+                pomiarC2.setImage(pomiar_C2);
+                pomiarB6_B10.setImage(pomiar);
+            }
+            else if(nazwa.charAt(4) == '4') {
+                pomiarB1_B5.setImage(PC4);
+                pomiarB_C3.setImage(pomiarBC);
+                pomiarC3.setImage(pomiar_C2);
+                pomiarB6_B10.setImage(pomiar);
+            }
+            else if(nazwa.charAt(4) == '5') {
+                pomiarB1_B5.setImage(PC5);
+                pomiarB_C4.setImage(pomiarBC);
+                pomiarC4.setImage(pomiar_C2);
+                pomiarB6_B10.setImage(pomiar);
+            }
+            else if(nazwa.charAt(4) == '6') {
+                pomiarB6_B10.setImage(PC6);
+                pomiarB_C5.setImage(pomiarBC);
+                pomiarC5.setImage(pomiar_C2);
+            }
+            else if(nazwa.charAt(4) == '7') {
+                pomiarB6_B10.setImage(PC7);
+                pomiarB_C6.setImage(pomiarBC);
+                pomiarC6.setImage(pomiar_C2);
+            }
+            else if(nazwa.charAt(4) == '8') {
+                pomiarB6_B10.setImage(PC8);
+                pomiarB_C7.setImage(pomiarBC);
+                pomiarC7.setImage(pomiar_C2);
+            }
+            else if(nazwa.charAt(4) == '9') {
+                pomiarB6_B10.setImage(PC9);
+                pomiarB_C8.setImage(pomiarBC);
+                pomiarC8.setImage(pomiar_C2);
+            }
+        }
+        else if (nazwa.charAt(3) == 'D') {
+            clear_pomiarDown();
+            pomiarE.setImage(pomiar);
+            if(nazwa.charAt(4) == '2') {
+                pomiarE1_E5.setImage(PD2);
+                pomiarE_D1.setImage(pomiarBC);
+                pomiarD1.setImage(pomiar_C2);
+                pomiarE6_E10.setImage(pomiar);
+            }
+            else if(nazwa.charAt(4) == '3') {
+                pomiarE1_E5.setImage(PD3);
+                pomiarE_D2.setImage(pomiarBC);
+                pomiarD2.setImage(pomiar_C2);
+                pomiarE6_E10.setImage(pomiar);
+            }
+            else if(nazwa.charAt(4) == '4') {
+                pomiarE1_E5.setImage(PD4);
+                pomiarE_D3.setImage(pomiarBC);
+                pomiarD3.setImage(pomiar_C2);
+                pomiarE6_E10.setImage(pomiar);
+            }
+            else if(nazwa.charAt(4) == '5') {
+                pomiarE1_E5.setImage(PD5);
+                pomiarE_D4.setImage(pomiarBC);
+                pomiarD4.setImage(pomiar_C2);
+                pomiarE6_E10.setImage(pomiar);
+            }
+            else if(nazwa.charAt(4) == '6') {
+                pomiarE6_E10.setImage(PD6);
+                pomiarE_D5.setImage(pomiarBC);
+                pomiarD5.setImage(pomiar_C2);
+            }
+            else if(nazwa.charAt(4) == '7') {
+                pomiarE6_E10.setImage(PD7);
+                pomiarE_D6.setImage(pomiarBC);
+                pomiarD6.setImage(pomiar_C2);
+            }
+            else if(nazwa.charAt(4) == '8') {
+                pomiarE6_E10.setImage(PD8);
+                pomiarE_D7.setImage(pomiarBC);
+                pomiarD7.setImage(pomiar_C2);
+            }
+            else if(nazwa.charAt(4) == '9') {
+                pomiarE6_E10.setImage(PD9);
+                pomiarE_D8.setImage(pomiarBC);
+                pomiarD8.setImage(pomiar_C2);
+            }
+        }
+        else if (nazwa.charAt(3) == 'E' || nazwa.charAt(3) == 'F') {
+            clear_pomiarDown();
+            pomiarE.setImage(pomiar);
+            if(nazwa.charAt(4) == '2') {
+                pomiarE1_E5.setImage(pomiarE2);
+                pomiarE6_E10.setImage(pomiar);
+            }
+            else if(nazwa.charAt(4) == '3') {
+                pomiarE1_E5.setImage(pomiarE3);
+                pomiarE6_E10.setImage(pomiar);
+            }
+            else if(nazwa.charAt(4) == '4') {
+                pomiarE1_E5.setImage(pomiarE4);
+                pomiarE6_E10.setImage(pomiar);
+            }
+            else if(nazwa.charAt(4) == '5') {
+                pomiarE1_E5.setImage(pomiarE5);
+                pomiarE6_E10.setImage(pomiar);
+            }
+            else if(nazwa.charAt(4) == '6') {
+                pomiarE1_E5.setImage(brak);
+                pomiarE6_E10.setImage(pomiarE6);
+            }
+            else if(nazwa.charAt(4) == '7') {
+                pomiarE1_E5.setImage(brak);
+                pomiarE6_E10.setImage(pomiarE7);
+            }
+            else if(nazwa.charAt(4) == '8') {
+                pomiarE1_E5.setImage(brak);
+                pomiarE6_E10.setImage(pomiarE8);
+            }
+            else if(nazwa.charAt(4) == '9') {
+                pomiarE1_E5.setImage(brak);
+                pomiarE6_E10.setImage(pomiarE9);
+            }
+            else {
+                pomiarE1_E5.setImage(brak);
+                pomiarE6_E10.setImage(pomiarE10);
+            }
+        }
+    }
+
     public void change_vertical(CheckBox checkBox, ImageView image) {
         if (checkBox.isSelected()) {
             checkBox.setDisable(true);
+
             if (elementy.getValue() == "Przewod") {
                 image.setImage(przewod);
             } else if (elementy.getValue() == "Rezystor 100") {
                 image.setImage(rezystor100);
-                if (czyAktywne(checkBox)) rezystancja += 100;
-                miernik.setText(" " + rezystancja);
+                if (czyAktywne(checkBox)) {
+                    rezystancja += 100;
+                }
             } else if (elementy.getValue() == "Rezystor 330") {
                 image.setImage(rezystor330);
                 if (czyAktywne(checkBox)) rezystancja += 330;
-                miernik.setText(" " + rezystancja);
             } else if (elementy.getValue() == "Rezystor 1k") {
                 image.setImage(rezystor1k);
                 if (czyAktywne(checkBox)) rezystancja += 1000;
-                miernik.setText(" " + rezystancja);
             } else if (elementy.getValue() == "Rezystor 10k") {
                 image.setImage(rezystor10k);
                 if (czyAktywne(checkBox)) rezystancja += 10000;
-                miernik.setText(" " + rezystancja);
             } else if (elementy.getValue() == "Kondensator 100nf") {
                 image.setImage(kondensator100nf);
             } else if (elementy.getValue() == "Kondensator 220uf") {
                 image.setImage(kondensator220uf);
             } else if (elementy.getValue() == "Kondensator 1000uf") {
                 image.setImage(kondensator1000uf);
-            } else if (elementy.getValue() == "Dioda krzemowa") {
-                image.setImage(dioda_krzemowa);
+            } else if (elementy.getValue() == "Dioda LED") {
+                image.setImage(dioda_led);
+                if(napiecie == 0.009) image.setImage(dioda_ledON);
             }
-            licz_napiecie();
+            set_pomiar(checkBox);
+            licz_natezenie();
         }
-//        else {
-//            if (elementy.getValue() == "Rezystor 100") {
-//                image.setImage(brak2);
-//                if (czyAktywne(checkBox)) rezystancja -= 100;
-//                miernik.setText(" " + rezystancja);
-//            } else if (elementy.getValue() == "Rezystor 330") {
-//                image.setImage(brak2);
-//                if (czyAktywne(checkBox)) rezystancja -= 330;
-//                miernik.setText(" " + rezystancja);
-//            } else if (elementy.getValue() == "Rezystor 1k") {
-//                image.setImage(brak2);
-//                if (czyAktywne(checkBox)) rezystancja -= 1000;
-//                miernik.setText(" " + rezystancja);
-//            } else if (elementy.getValue() == "Rezystor 10k") {
-//                image.setImage(brak2);
-//                if (czyAktywne(checkBox)) rezystancja -= 10000;
-//                miernik.setText(" " + rezystancja);
-//            }
-////            image.setImage(brak2);
-////            rezystancja -= 10000;
-//            licz_napiecie();
-//        }
+    }
+ArrayList<String> zbior = new ArrayList<>();
+
+    void czyRownolegle(CheckBox checkBox, int rez) {
+        int counter = 0;
+        for(int i = 0; i < zbior.size(); i++) {
+            if (zbior.get(i).charAt(1) == checkBox.getId().charAt(1) && zbior.get(i).charAt(4) == checkBox.getId().charAt(4)) {
+                counter++;
+            }
+        }
+        if(counter > 1) {
+            System.out.println(rezystancja);
+            rezystancja-=2*rez;
+            System.out.println(rezystancja);
+            rezystancja +=rez*rez/(rez+rez);
+            System.out.println(rezystancja);
+            char firstChar = checkBox.getId().charAt(0);
+            if(firstChar == 'A' || firstChar == 'B' || firstChar == 'C') {
+                clear_pomiarUp();
+                pomiarPrimary1.setImage(pomiar);
+            }
+            if(firstChar == 'D' || firstChar == 'E' || firstChar == 'F') {
+                clear_pomiarDown();
+                pomiarPrimary2.setImage(pomiar);
+            }
+        }
+
     }
 
     public void change_horizontal(CheckBox checkBox, ImageView image) {
         if (checkBox.isSelected()) {
             checkBox.setDisable(true);
+            char firstChar = checkBox.getId().charAt(0);
+            if(firstChar == 'A' || firstChar == 'B' || firstChar == 'C') clear_pomiarUp();
+            if(firstChar == 'D' || firstChar == 'E' || firstChar == 'F') clear_pomiarDown();
+            set_pomiar(checkBox);
             if (elementy.getValue() == "Przewod") {
                 image.setImage(przewod2);
             } else if (elementy.getValue() == "Rezystor 100") {
                 image.setImage(rezystor100_2);
-                if (czyAktywne(checkBox)) {
+//                if (czyAktywne(checkBox)) {
                     rezystancja += 100;
-                }
-                miernik.setText(" " + rezystancja);
+                    zbior.add(checkBox.getId());
+                    System.out.println(zbior);
+//                    if(checkBox.getId().charAt(0) == checkBox.getId().charAt(3) &&  == 'B') {
+                        czyRownolegle(checkBox, 100);
+                        System.out.println(rezystancja);
+//                    }
+//                }
             } else if (elementy.getValue() == "Rezystor 330") {
                 image.setImage(rezystor330_2);
-                if (czyAktywne(checkBox)) {
+//                if (czyAktywne(checkBox)) {
                     rezystancja += 330;
-                }
-                miernik.setText(" " + rezystancja);
+                    zbior.add(checkBox.getId());
+                    System.out.println(zbior);
+//                    if(checkBox.getId().charAt(0) == checkBox.getId().charAt(3) &&  == 'B') {
+                    czyRownolegle(checkBox, 330);
+                    System.out.println(rezystancja);
+//                }
             } else if (elementy.getValue() == "Rezystor 1k") {
                 image.setImage(rezystor1k_2);
-                if (czyAktywne(checkBox)) {
+//                if (czyAktywne(checkBox)) {
                     rezystancja += 1000;
-                }
-                miernik.setText(" " + rezystancja);
+                zbior.add(checkBox.getId());
+                System.out.println(zbior);
+//                    if(checkBox.getId().charAt(0) == checkBox.getId().charAt(3) &&  == 'B') {
+                czyRownolegle(checkBox, 1000);
+                System.out.println(rezystancja);
+//                }
             } else if (elementy.getValue() == "Rezystor 10k") {
                 image.setImage(rezystor10k_2);
-                if (czyAktywne(checkBox)) {
+//                if (czyAktywne(checkBox)) {
                     rezystancja += 10000;
-                }
-                miernik.setText(" " + rezystancja);
-            } else if (elementy.getValue() == "Kondensator 100nf") {
-                image.setImage(kondensator100nf_2);
-            } else if (elementy.getValue() == "Kondensator 220uf") {
-                image.setImage(kondensator220uf_2);
-            } else if (elementy.getValue() == "Kondensator 1000uf") {
-                image.setImage(kondensator1000uf_2);
-            } else if (elementy.getValue() == "Dioda krzemowa") {
-                image.setImage(dioda_krzemowa_2);
+                zbior.add(checkBox.getId());
+                System.out.println(zbior);
+//                    if(checkBox.getId().charAt(0) == checkBox.getId().charAt(3) &&  == 'B') {
+                czyRownolegle(checkBox, 10000);
+                System.out.println(rezystancja);
+//                }
+            } else if (elementy.getValue() == "Dioda LED") {
+                image.setImage(dioda_led_2);
+                if(napiecie == 0.009) image.setImage(dioda_led_2ON);
             }
-            licz_napiecie();
+            licz_natezenie();
         }
-//        else {
-////            image.setImage(brak);
-//            if (elementy.getValue() == "Rezystor 100") {
-//                image.setImage(brak);
-//                if (czyAktywne(checkBox)) rezystancja -= 100;
-//                miernik.setText(" " + rezystancja);
-//            } else if (elementy.getValue() == "Rezystor 330") {
-//                image.setImage(brak);
-//                if (czyAktywne(checkBox)) rezystancja -= 330;
-//                miernik.setText(" " + rezystancja);
-//            } else if (elementy.getValue() == "Rezystor 1k") {
-//                image.setImage(brak);
-//                if (czyAktywne(checkBox)) rezystancja -= 1000;
-//                miernik.setText(" " + rezystancja);
-//            } else if (elementy.getValue() == "Rezystor 10k") {
-//                image.setImage(brak);
-//                if (czyAktywne(checkBox)) rezystancja -= 10000;
-//                miernik.setText(" " + rezystancja);
-//            }
-//            licz_napiecie();
-//        }
     }
 
     public void changeA2_B2() {

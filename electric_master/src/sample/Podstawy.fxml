@@ -1,22 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="679.0" prefWidth="788.0" style="-fx-background-image: img\miernij.jpg;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MenuController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="679.0" prefWidth="788.0" style="-fx-background-image: img\miernij.jpg;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.PodstawyController">
    <children>
       <Label layoutX="305.0" layoutY="31.0" prefHeight="54.0" prefWidth="179.0" text="PODSTAWY">
          <font>
             <Font size="33.0" />
          </font>
       </Label>
-      <TextArea layoutX="46.0" layoutY="99.0" prefHeight="136.0" prefWidth="274.0" text="Elektronika bazuje na fizyce, dlatego zasady &#10;w niej obowiązujące są jednoznaczne.&#10;Pierwszą fundamentalną umiejętnością jest &#10;zrozumienie trzech podstawowych pojęć:&#10;- napięcie,&#10;- prąd,&#10;- opór (inaczej rezystancja)." />
-      <TextArea layoutX="46.0" layoutY="244.0" prefHeight="112.0" prefWidth="274.0" text="Napięcie jest miarą siły, z jaką nośniki ładunku &#10;elektrycznego chcą się do siebie zbliżyć. Jest to &#10;pewne uproszczenie, ale oddające postać rzeczy.&#10;Im większe napięcie, tym większa jest ta siła. &#10;Jeżeli napięcie jest zerowe, wówczas tej siły &#10;nie ma." />
-      <TextArea layoutX="46.0" layoutY="366.0" prefHeight="136.0" prefWidth="274.0" text="Jeżeli między dwoma punktami istnieje napięcie,&#10;to po umożliwieniu nośnikom przepływu z &#10;jednego punktu do drugiego zacznie płynąć &#10;prąd. Prąd będzie tym większy, im więcej &#10;nośników przepłynie przez połączenie w &#10;jednostce czasu, a zatem prąd jest miarą &#10;szybkości ich przepływu." />
-      <TextArea layoutX="46.0" layoutY="510.0" prefHeight="152.0" prefWidth="274.0" text="Na podstawie poprzednich informacji można &#10;wysnuć taki wniosek: jeżeli nośniki chcą &#10;przeskakiwać z jednego punktu do drugiego &#10;(napięcie), a umożliwienie im tego spowoduje &#10;ich przepływ, to co w zasadzie miałoby &#10;ograniczać ich szybkość (natężenie prądu)? &#10;Tutaj pojawia się trzeci fundamentalny &#10;czynnik, czyli opór, zwany również rezystancją." />
-      <Button layoutX="36.0" layoutY="23.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="88.0" text="Wróć" />
+      <Button layoutX="36.0" layoutY="23.0" mnemonicParsing="false" onAction="#backMenu" prefHeight="46.0" prefWidth="88.0" text="Wróć" />
+      <Text layoutX="46.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Elektronika bazuje na fizyce, dlatego zasady w niej obowiązujące są jednoznaczne. Pierwszą fundamentalną umiejętnością jest zrozumienie trzech podstawowych pojęć: napięcie, prąd, opór (inaczej rezystancja)." wrappingWidth="317.13671875">
+         <cursor>
+            <Cursor fx:constant="NONE" />
+         </cursor>
+      </Text>
+      <Text layoutX="46.0" layoutY="248.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Napięcie jest miarą siły, z jaką nośniki ładunku elektrycznego chcą się do siebie zbliżyć. Jest to pewne uproszczenie, ale oddające postać rzeczy.Im większe napięcie, tym większa jest ta siła. Jeżeli napięcie jest zerowe, wówczas tej siły nie ma." wrappingWidth="317.13671875">
+         <cursor>
+            <Cursor fx:constant="NONE" />
+         </cursor>
+      </Text>
+      <Text layoutX="46.0" layoutY="353.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jeżeli między dwoma punktami istnieje napięcie,to po umożliwieniu nośnikom przepływu z jednego punktu do drugiego zacznie płynąć prąd. Prąd będzie tym większy, im więcej nośników przepłynie przez połączenie w jednostce czasu, a zatem prąd jest miarą szybkości ich przepływu." wrappingWidth="317.13671875">
+         <cursor>
+            <Cursor fx:constant="NONE" />
+         </cursor>
+      </Text>
+      <Text layoutX="46.0" layoutY="452.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Na podstawie poprzednich informacji można wysnuć taki wniosek: jeżeli nośniki chcą przeskakiwać z jednego punktu do drugiego (napięcie), a umożliwienie im tego spowoduje ich przepływ, to co w zasadzie miałoby ograniczać ich szybkość (natężenie prądu)? Tutaj pojawia się trzeci fundamentalny czynnik, czyli opór, zwany również rezystancją." wrappingWidth="317.13671875">
+         <cursor>
+            <Cursor fx:constant="NONE" />
+         </cursor>
+      </Text>
+      <Text layoutX="434.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Elementy bierne nie są w stanie wytwarzać energii elektrycznej ani zmieniać swoich parametrów pod wpływem parametrów panujących w obwodzie (napięcia lub prądu). Ich jedynym zadaniem jest magazynowanie energii (cewka, kondensator) lub po prostu jej „tracenie” (rezystor)." wrappingWidth="317.13671875">
+         <cursor>
+            <Cursor fx:constant="NONE" />
+         </cursor>
+      </Text>
+      <Text layoutX="434.0" layoutY="248.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Elementy czynne to takie, które wytwarzają energię elektryczną lub są w stanie zmieniać swoje parametry zależnie od przyłożonego do nich prądu i/lub napięcia. Do tej grupy należą przede wszystkim źródła zasilania (baterie) oraz tranzystory i układy scalone." wrappingWidth="317.13671875">
+         <cursor>
+            <Cursor fx:constant="NONE" />
+         </cursor>
+      </Text>
    </children>
 </Pane>

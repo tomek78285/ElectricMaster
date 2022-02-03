@@ -21,6 +21,19 @@ public class MenuController {
         mainController.setScreen(pane);
     }
 
+    public void openWindowNauka(String window) {
+        FXMLLoader loader = new FXMLLoader(this.getClass().getResource(window));
+        Pane pane = null;
+        try {
+            pane = loader.load();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        PodstawyController appController = loader.getController();
+        appController.setMainController(mainController);
+        mainController.setScreen(pane);
+    }
+
     @FXML
     private MainController mainController;
 
@@ -31,22 +44,25 @@ public class MenuController {
     public void openPrawoOhma() { openWindow("PrawoOhma.fxml");}
 
     @FXML
-    public void openPodstawy() { openWindow("Podstawy.fxml");}
+    public void openPodstawy() { openWindowNauka("Podstawy.fxml");}
 
     @FXML
-    public void openPrawoOhmaNauka() { openWindow("PrawoOhma.fxml");}
+    public void openPrawoOhmaNauka() { openWindowNauka("PrawoOhmaNauka.fxml");}
 
     @FXML
-    public void openPrawoKirchhoffa_1_Nauka() { openWindow("PrawoOhma.fxml");}
+    public void openPrawoKirchhoffa_1_Nauka() { openWindowNauka("PrawoKirchhoffa_1_Nauka.fxml");}
 
     @FXML
-    public void openPrawoKirchhoffa_2_Nauka() { openWindow("PrawoOhma.fxml");}
+    public void openPrawoKirchhoffa_2_Nauka() { openWindowNauka("PrawoKirchhoffa_2_Nauka.fxml");}
 
     @FXML
-    public void openPrawoKirchhoffa_1() { openWindow("PrawoOhma.fxml");}
+    public void openInstrukcja() { openWindowNauka("Instrukcja.fxml");}
 
     @FXML
-    public void openPrawoKirchhoffa_2() { openWindow("PrawoOhma.fxml");}
+    public void openZadanieZDioda() { openWindow("ZadanieZDioda.fxml");}
+
+    @FXML
+    public void openZadanieZDioda2() { openWindow("ZadanieZDioda2.fxml");}
 
     @FXML
     public void exit() {
